@@ -46,6 +46,7 @@ syntax on
 
 " Enable use of the mouse for all modes
 set mouse=a
+vmap <C-c> "+y
 
 set autoindent
 
