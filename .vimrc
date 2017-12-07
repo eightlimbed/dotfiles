@@ -7,14 +7,14 @@ filetype plugin indent on
 call vundle#begin()           " begin plugins
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'godlygeek/tabular'
 Plugin 'git://github.com/jiangmiao/auto-pairs.git'
 Plugin 'tpope/vim-surround'
-Plugin 'bluz71/vim-moonfly-colors'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " end plugins
 
+colorscheme gruvbox
 " leader is comma
 let mapleader=","
 
@@ -94,7 +94,7 @@ noremap cw ciw
 set nojoinspaces
 
 " Softtabs, 2 spaces
-"set tabstop=2
+set tabstop=2
 "set shiftwidth=2
 set shiftround
 set noexpandtab
@@ -120,7 +120,6 @@ augroup autoSaveAndRead
 augroup END
 
 set t_Co=256
-colorscheme moonfly
 hi Normal ctermbg=none
 set background=dark
 :highlight Visual cterm=reverse ctermbg=NONE
