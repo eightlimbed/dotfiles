@@ -23,20 +23,8 @@ nnoremap <leader>q :q!<enter>
 nnoremap <leader>x :x<enter>
 nnoremap <leader>w :w<enter>
 
-" use "+y to copy to clipboard
-set clipboard+=unnamedplus
-
-" select all and copy to clipboard
-nnoremap <leader>ca gg"+yG
-
-" remap cc in visual mode to copy to clipboard
-vnoremap cc "+y
-
 " completion for spelling with Ctrl-n and Ctrl-p in insert mode
 set complete+=kspell
-
-" select all with <leader>a
-nnoremap <leader>a ggVG 
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -46,9 +34,6 @@ syntax on
 
 " Enable use of the mouse for all modes
 set mouse=a
-vmap <C-c> "+y
-
-set autoindent
 
 set backspace=2             " deletes like most programs in insert mode
 set ruler                   " show the cursor position all the time
@@ -88,27 +73,15 @@ set wildmenu
 noremap cw ciw
 
 " Display extra whitespace
-" set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
-" Softtabs, 2 spaces
-set tabstop=2
-"set shiftwidth=2
-set shiftround
-set noexpandtab
-
-" Betty-style tabs and indents
-set tabstop=4 shiftwidth=4
-set smartindent
-set cindent
-
-" start c file with stdio and main function with ;c
-autocmd Filetype c map <leader>c i#include <stdio.h><Enter><Enter>int main(void)<Enter>{<Enter>
-
-" start bash script with bash
-nnoremap <leader>b i#!/bin/bash<Enter>
+" Python
+set tabstop=4 
+set shiftwidth=4
+set expandtab
 
 " autosave and autoread
 set autoread
@@ -130,9 +103,6 @@ noremap N Nzz
 
 " change dw to daw
 noremap dw daw
-
-" insert timestamp
-:nnoremap <leader>T "=strftime("%b %d, %Y @ %T")<CR>P"
 
 " map cl to change a full line
 nnoremap cl c$
