@@ -14,6 +14,7 @@ Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " end plugins
 
+autocmd Filetype c setlocal tabstop=4 noexpandtab
 colorscheme gruvbox
 " leader is comma
 let mapleader=","
