@@ -1,21 +1,22 @@
 " required stuff from vundle
 set rtp+=~/.vim/bundle/Vundle.vim
-set nocompatible           
-filetype off              
+set nocompatible
+filetype off
 filetype plugin indent on
 
 call vundle#begin()           " begin plugins
-
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'git://github.com/jiangmiao/auto-pairs.git'
-Plugin 'tpope/vim-surround'
 Plugin 'morhetz/gruvbox'
-
 call vundle#end()            " end plugins
 
+" Tabs instead of spaces for C
 autocmd Filetype c setlocal tabstop=4 noexpandtab
+autocmd Filetype h setlocal tabstop=4 noexpandtab
+
+" Gruvbox theme
 colorscheme gruvbox
+
 " leader is comma
 let mapleader=","
 
@@ -79,7 +80,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
-" Python
+" Spaces not tabs
 set tabstop=4 
 set shiftwidth=4
 set expandtab
@@ -101,6 +102,10 @@ set background=dark
 " Center next Vim search match
 noremap n nzz
 noremap N Nzz
+
+" Shortcut key for set paste and set nopaste
+nnoremap <leader>v :set paste<Enter>i
+nnoremap <leader>vv :set nopaste<Enter>
 
 " change dw to daw
 noremap dw daw
